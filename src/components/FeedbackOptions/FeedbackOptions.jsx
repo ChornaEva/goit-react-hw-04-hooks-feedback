@@ -8,13 +8,14 @@ import {
 } from "./FeedbackOptions.styled";
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  console.log(options);
   return (
     <FeedbackContainer>
       <ButtonList>
         {Object.keys(options).map((option) => {
           return (
             <ButtonItem key={option}>
-              <FeedbackButton type="button" onClick={onLeaveFeedback}>
+              <FeedbackButton type="button" name={option} onClick={onLeaveFeedback}>
                 {option}
               </FeedbackButton>
             </ButtonItem>
